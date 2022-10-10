@@ -1,6 +1,5 @@
 let activeWidget = document.querySelector('.chat-widget');
-
-activeWidget.addEventListener('click', () => {
+    activeWidget.addEventListener('click', () => {
     activeWidget.classList.add("chat-widget_active")
 })
 
@@ -16,7 +15,6 @@ function getTime() {
     minutes = date.getMinutes();
     seconds = date.getSeconds();
     time = `${hours}:${minutes}:${seconds}`;
-
     return time;
 }
 
@@ -24,10 +22,9 @@ let inputWidget = document.getElementById('chat-widget__input');
 let messagesWidget = document.getElementById('chat-widget__messages')
 
 function botSay () {
-    let talk = ['Вы кто?', 'Ну, здравствуйте!', 'Не отвлекайте!!', 'Меня нет, вернусь завтра... Может быть', 'Отвечу завтра.', 'У меня нет настроения отвечать!', 'Сам такой!', 'Все товары закончились, до свидания!'];
-
+    let talk = ['Вы кто?', 'Ну, здравствуйте!', 'Не отвлекайте!!', 'Меня нет, вернусь завтра... Может быть', 
+    'Отвечу завтра.', 'У меня нет настроения отвечать!', 'Сам такой!', 'Все товары закончились, до свидания!'];
     index = Math.floor(Math.random() * talk.length);
-
     return talk[index];
 }
 
@@ -43,7 +40,6 @@ inputWidget.addEventListener('keypress', (e) => {
         } else {
             return false;
         }
-
         inputWidget.value = '';
 
         messagesWidget.innerHTML += `
