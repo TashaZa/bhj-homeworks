@@ -11,7 +11,6 @@ function addToCart(id, img, quantity) {
     let addedProduct = `<div class="cart__product" data-id="${id}">
                             <img class="cart__product-image" src="${img}">
                             <div class="cart__product-count">${quantity}</div>
-                            <a href="#" class="task__remove">&times;</a>
                         </div>`;
     cart.insertAdjacentHTML('beforeend', addedProduct);
 };
